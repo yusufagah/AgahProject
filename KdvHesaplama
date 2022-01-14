@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+class KdvHesaplama{
+    public static void main(String[] args){
+        double ücret, kdvOran;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Kdv'siz Tutari Giriniz: ");
+        ücret = input.nextDouble();
+
+        if(ücret > 1000){
+            kdvOran = 0.18;
+
+            double kdvTutar = ücret * kdvOran;
+            double toplam = ücret + kdvTutar;
+
+            System.out.print("Kdv'li ücret: " + toplam);
+        }
+        else if(ücret < 1000){
+            kdvOran = 0.08;
+
+            double kdvTutar = ücret * kdvOran;
+            double toplam = ücret + kdvTutar;
+            System.out.print("Kdv'li ücret: " + toplam);
+        }
+
+
+    }
+}
