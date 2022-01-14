@@ -1,0 +1,46 @@
+ackage Giris;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int fizik, tarih, turkce, muzik, kimya;
+
+        Scanner inp = new Scanner(System.in);
+
+        System.out.print("Fizik Notunuz : ");
+        fizik = inp.nextInt();
+
+        System.out.print("Tarih Notunuz : ");
+        tarih = inp.nextInt();
+
+        System.out.print("Turkce Notunuz : ");
+        turkce = inp.nextInt();
+
+        System.out.print("Muzik Notunuz : ");
+        muzik = inp.nextInt();
+
+        System.out.print("Kimya Notunuz : ");
+        kimya = inp.nextInt();
+
+        int gecmeNot= 60;
+        int toplam = (fizik + tarih + turkce + muzik + kimya);
+        double  ogrenciNot = toplam / 5;
+        boolean basariDurumu;
+
+        if (ogrenciNot > gecmeNot)
+        {
+            basariDurumu=true;
+            System.out.println("Ortalamanız : " + ogrenciNot + " " + basariDurumu);
+        }
+        else
+        {
+            basariDurumu=false;
+            System.out.println("Ortalamanız : " + ogrenciNot + " " + basariDurumu);
+        }
+
+    }
+
+}
