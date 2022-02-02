@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class VücutKitleİndeksi {
+
+    public static void main(String[] args){
+        double  boy , kilo;
+        Scanner inp = new Scanner(System.in);
+
+        System.out.print("Lütfen boyunuzu giriniz ; ");
+        boy = inp.nextDouble();
+
+        System.out.print("Lütfen kilonuzu girin : ");
+        kilo = inp.nextDouble();
+
+        double vki = kilo / (boy * boy) ;
+        System.out.print("Vücut Kitle İndeksiniz : " +vki);
+
+
+    }
+}
