@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class ManavKasaProgramı {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Kaç Kilogram Armut Aldınız? Giriniz: ");
+        int a = scan.nextInt();
+        System.out.print("Kaç Kilogram Elma Aldınız? Giriniz: ");
+        int e = scan.nextInt();
+        System.out.print("Kaç Kilogram Domates Aldınız? Giriniz: ");
+        int d = scan.nextInt();
+        System.out.print("Kaç Kilogram Muz Aldınız? Giriniz: ");
+        int m = scan.nextInt();
+        System.out.print("Kaç Kilogram Patlıcan Aldınız? Giriniz: ");
+        int p = scan.nextInt();
+
+        double totalPrice = ((a*2.14) +(e*3.67)+(d*1.11)+(m*0.95)+(p*5));
+        System.out.print("Toplam Ücret: "+totalPrice);
+
+    }
+}
