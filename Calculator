@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Calculator {
+
+    public static void main(String[] args) {
+
+        int n1, n2, select;
+        System.out.print("Birinci Tam Sayıyı Giriniz:");
+        Scanner scanner=new Scanner(System.in);
+        n1=scanner.nextInt();
+
+        System.out.print("İkinci Tam Sayıyı Giriniz:");
+        n2=scanner.nextInt();
+
+        System.out.print("1.Toplama\n2.Çıkarma\n3.Çarpma\n4.Bölme\nİşlemi seçiniz:");
+        select=scanner.nextInt();
+
+        switch (select) {
+            case 1:
+                System.out.print(n1+n2);
+                break;
+            case 2:
+                System.out.print(n1-n2);
+                break;
+            case 3:
+                System.out.print(n1*n2);
+                break;
+            case 4:
+                if (n2 != 0) {
+
+                    System.out.print(n1/n2);
+                }else
+                    System.out.print("Sayı 0'a Bölünemez");
+                break;
+            default:
+
+                System.out.print("Hatalı Sayı Girişi Yaptınız.Tekrar Deneyin.");
+
+
+
+        }
+
+    }
+
+}
