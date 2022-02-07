@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class KullanıcıGirişi {
+    public static void main(String[] args){
+
+        String UserName,Password,Reset,NewPassword;
+
+        Scanner inp = new Scanner(System.in);
+
+        System.out.print("Kullanıcı AdınıZı Giriniz :");
+        UserName = inp.nextLine();
+
+        System.out.print("Şifrenizi Giriniz :");
+        Password = inp.nextLine();
+
+        if (UserName.equals("Jack") && Password.equals("1234")){
+            System.out.println("Giriş Yaptınız :)");
+        }else {
+            System.out.println("Hatalı Giriş Yaptınız :( Şifrenizi Değiştirmek İçin EVET Yazınız? ");
+            Reset = inp.nextLine();
+            if (Reset.equals("EVET"))
+
+            System.out.print("Yeni Şifrenizi Giriniz : ");
+            NewPassword = inp.nextLine();
+
+            while (NewPassword.equals("1234") || NewPassword.equals(Password)){
+                System.out.print("Şifreniz Öncekiyle Aynı Olmamalı");
+                NewPassword = inp.nextLine();
+            }
+                System.out.println("Şifreniz Değiştirildi :) ");
+            }
+
+
+    }
+}
