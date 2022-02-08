@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class EtkinlikOnerme {
+
+    public static void main(String[] args) {
+        int heat;
+
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Sıcaklık Giriniz : ");
+        heat = inp.nextInt();
+
+        if (heat < 5) {
+            System.out.print("Kayak İçin Şartlar Harika :) ");
+        }else if (heat <= 25) {
+            if (heat <= 15) {
+                System.out.println("Sinemaya Gidebilirsin !");
+            }
+            if (heat >= 10) {
+                System.out.print("Piknik Yapmak İçin Mükemmel Bir Hava :) ");
+            }
+        }else {
+            System.out.print("Yüzmeye Gitmelisin (: ");
+        }
+
+
+    }
+}
