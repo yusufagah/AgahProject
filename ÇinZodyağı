@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class CinZodyagi {
+
+    public static void main(String[] args) {
+
+        System.out.print("Doğduğunuz Yılı Giriniz : ");
+        Scanner inp = new Scanner(System.in);
+
+        int day = inp.nextInt();
+        String[] animals = {"Maymun", "Horoz", "Köpek", "Domuz", "Fare", "Öküz", "Kaplan", "Tavşan", "Ejderha", "Yılan", "At", "Koyun"};
+
+        int result = day % 12;      
+        System.out.println(animals[result]);
+    }
+}
