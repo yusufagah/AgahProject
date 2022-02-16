@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class TamBolunenSayiOrtalamasiniBulma {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int k;
+
+        System.out.print("Lütfen Bir Sayı Giriniz : ");
+        k = input.nextInt();
+        
+        double count = 0, sum = 0;
+        int i = 0;
+        while (i <= k) {
+            i++;
+
+            if (i % 4 == 0 && i % 3 == 0) {
+
+                sum = sum + i;
+                count++;
+                
+            }
+        }
+        double ortalama = sum / count;
+        System.out.println("Girilem Değere Kadar Olan Sayıların 3 ve 4'e Bölümünden Sonra Ortalaması : " + ortalama);
+        
+    }
+}
