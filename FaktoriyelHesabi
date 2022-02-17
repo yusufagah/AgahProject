@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class FaktoriyelHesabi {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Lütfen Bir Sayı Giriniz :");
+
+        int num = scan.nextInt();
+        int sayac=num;
+        long faktoriyel = 1;
+        while(sayac>1)
+
+        {
+            faktoriyel *= sayac;
+            sayac--;
+        }
+        System.out.printf("%d Sayısının Faktöriyeli = %d \n", num, faktoriyel);
+    }
+}
