@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class UsluSayiHesaplama {
+
+    public static void main(String[] args) {
+
+
+        int taban = 5, kuvvet = 2;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Üssü Alınacak Sayıyı Giriniz :");
+        taban = input.nextInt();
+
+        System.out.print("Üs Olacak Sayıyı Giriniz :");
+        kuvvet = input.nextInt();
+
+        double sonuc = 1;
+
+        for (;kuvvet != 0; --kuvvet)
+        {
+            sonuc *= taban;
+        }
+
+        System.out.println("Sonuç = " + sonuc);
+    }
+}
