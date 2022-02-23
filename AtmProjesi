@@ -42,9 +42,9 @@ public class AtmProjesi {
                 System.out.println("Bakiyeniz = " + bakiye);
                 break;
             case 4:
-                System.out.println("Kartınızı Almayı Unutmayınız !");
+                System.out.println("\nTekrar Görüşmek Üzere :)");
             default:
-                System.out.println("Yanlış İslem Seçtiniz.Lütfen Tekrar Giriniz.");
+                System.out.println("Kartınızı ALmayı Unutmayın !");
         }
     }
 }
