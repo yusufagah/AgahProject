@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class HarmonikSayiBulma {
+public class HarmonikOrtalamaBulma {
 
     public static void main(String[] args) {
 
