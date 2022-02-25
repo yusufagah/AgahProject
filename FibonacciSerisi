@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class FibonacciSerisi {
+
+    public static void main(String[] args) {
+
+        Scanner input =new Scanner(System.in);
+        System.out.print("Kaç Adet Fibonnacci Sayısı Görmek İstiyorsunuz :");
+        int sayi= input.nextInt();
+        int birinci=0;
+        int ikinci=1;
+        int ucuncu=birinci+ikinci;
+
+        System.out.print("Fibonacci Sayıları :");
+        System.out.print(" ");
+
+        while(sayi>0){
+            System.out.print(ucuncu+ " ");
+            sayi--;
+            birinci=ikinci;
+            ikinci=ucuncu;
+            ucuncu=birinci+ikinci;
+        }
+    }
+}
