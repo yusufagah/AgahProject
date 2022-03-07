@@ -1,0 +1,164 @@
+import java.util.Scanner;
+
+public class Calculator {
+
+    static int sum(int a, int b){
+        int result = a + b;
+        System.out.print(result);
+        return result;
+    }
+
+    static int minus(int a, int b){
+        int result = a - b;
+        System.out.print(result);
+        return result;
+    }
+
+    static int times(int a, int b){
+        int result = a * b;
+        System.out.print(result);
+        return result;
+    }
+
+    static int divided(int a, int b){
+        int result = a / b;
+        System.out.print(result);
+        return result;
+    }
+
+    static int power(int a, int b){
+        int result = 1;
+        for(int i=1; i <= b ;i++){
+            result *= a;
+        }
+        System.out.print(result);
+        return result;
+    }
+
+    static int fact(int n){
+        int result = 1;
+
+        for(int i=1; i <= n ; i++){
+            result *= i;
+        }
+        System.out.print(result);
+        return result;
+
+    }
+
+    static int mod(int a, int b){
+        int result = a % b;
+
+        System.out.print(result);
+        return result;
+    }
+
+    static void calc(int a, int b){
+        System.out.println("Çevresi: "+(2*(a + b)));
+        System.out.print("Alanı: "+(a * b));
+    }
+
+
+
+
+    public static void main(String args[]) {
+
+        Scanner input = new Scanner(System.in);
+        int select;
+
+        String menu = "1-Toplama işlemi\n"
+                +"2-Çıkarma işlemi\n"
+                +"3-Çarpma işlemi\n"
+                +"4-Bölme işlemi\n"
+                +"5-Üslü Sayu Bulma\n"
+                +"6-Faktöriyel Hesaplama\n"
+                +"7-Mod Alma\n"
+                +"8-Dikdörtgen Alanı ve Çevre Hesaplama\n"
+                +"0-Çıkış Yap";
+
+        System.out.println(menu);
+
+        while(true){
+            select = input.nextInt();
+
+            int a, b;
+
+            if(select == 1){
+                System.out.print("Lütfen İlk Sayıyı Giriniz :  ");
+                a = input.nextInt();
+
+                System.out.print("Lütfen İkinci Sayıyı Giriniz : ");
+                b = input.nextInt();
+                sum(a, b);
+
+            }else if(select == 2){
+                System.out.print("Lütfen İlk Sayıyı Giriniz :  ");
+                a = input.nextInt();
+
+                System.out.print("Lütfen İkinci Sayıyı Giriniz : ");
+                b = input.nextInt();
+                minus(a, b);
+
+            }else if(select == 3){
+                System.out.print("Lütfen İlk Sayıyı Giriniz :  ");
+                a = input.nextInt();
+
+                System.out.print("Lütfen İkinci Sayıyı Giriniz : ");
+                b = input.nextInt();
+                times(a, b);
+
+            }else if(select == 4){
+                System.out.print("Lütfen İlk Sayıyı Giriniz :  ");
+                a = input.nextInt();
+
+                System.out.print("Lütfen İkinci Sayıyı Giriniz : ");
+                b = input.nextInt();
+                if(b != 0 ){
+                    divided(a, b);
+                }else{
+                    System.out.print("Lütfen 0'dan Farklı Bir Sayı Giriniz !");
+                }
+
+            }else if(select == 5){
+                System.out.print("Lütfen İlk Sayıyı Giriniz :  ");
+                a = input.nextInt();
+
+                System.out.print("Lütfen İkinci Sayıyı Giriniz : ");
+                b = input.nextInt();
+                power(a, b);
+
+            }else if(select == 6){
+                System.out.println("Lütfen N Sayısını Giriniz : ");
+                int n = input.nextInt();
+                fact(n);
+            }else if(select == 7){
+                System.out.print("Lütfen İlk Sayıyı Giriniz :  ");
+                a = input.nextInt();
+
+                System.out.print("Lütfen İkinci Sayıyı Giriniz : ");
+                b = input.nextInt();
+
+                mod(a, b);
+            }else if(select == 8){
+                System.out.print("Lütfen İlk Sayıyı Giriniz :  ");
+                a = input.nextInt();
+
+                System.out.print("Lütfen İkinci Sayıyı Giriniz : ");
+                b = input.nextInt();
+
+                calc(a, b);
+            }else if(select==0){
+                System.out.print("Program Sonlanıyor...");
+                break;
+            }else{
+                System.out.print("Yanlış Bir Değer Girdiniz !");
+                break;
+            }
+
+
+        }
+
+
+    }
+
+
